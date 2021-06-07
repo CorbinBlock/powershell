@@ -1,0 +1,1 @@
+C:\Users\cbloc\AppData\Local\Microsoft\WindowsApps\ubuntu.exe run bash -c %1
