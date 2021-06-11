@@ -1,45 +1,28 @@
 # ===============================================================================================================
 # Function: Provide list of Task scheduler tasks to execute via pwsh CLI - CB 2021-06-04
 # Sources: https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/get-scheduledtask?view=windowsserver2019-ps
-#$q+2(SmetE*6qaXX
 # ===============================================================================================================
 
-# ETL
+# Get-ScheduledTask
 
-# $TaskName = "workout_log_etl"
-# $TaskName = "stretch_log_etl"
-# $TaskName = "call_psql_client"
+ # task_name = "call_check_pwsh_version"
+# $task_name = "call_stop_processes_pwsh"
+# $task_name = "call_startup_pwsh"
 
-# Monitoring
-
-# $TaskName = "monitor_top_procs" # Working Set Memory
-# $TaskName = "monitor_top_procs_cpu"
-# $TaskName = "call_systeminfo_exe"
-# $TaskName = "check_pwsh_version_table"
-
-# Updates 
-
-# $TaskName = "call_update_pwsh"
-# $TaskName = "update_upgrade_ubuntu"
-# $TaskName = "update_windows"
-
-
-# Start / Stop Processes
-
-# $TaskName = "close_process"
-# $TaskName = "open_processes"
-# $TaskName = "call_startup_pwsh"
-# $TaskName = "power_on_RHEL8_VM1"
 
 # Start array of tasks
 
-# $ScheduledTaskArray = @('workout_log_etl', 'stretch_log_etl', 'call_psql_client') 
-# $ScheduledTaskArray = @('update_windows', 'call_update_pwsh')
-$ScheduledTaskArray = @('call_systeminfo_exe', 'check_pwsh_version_table','monitor_top_procs_cpu', 'monitor_top_procs') 
+# $ScheduledTaskArray = @('call_monitor_top_procs_memory', 'call_monitor_top_procs_cpu')
+# $ScheduledTaskArray = @('call_systeminfo_exe', 'call_check_pwsh_version')
+# $ScheduledTaskArray = @('call_stop_processes_pwsh')
+  $ScheduledTaskArray = @('call_update_pwsh')
+  # $ScheduledTaskArray = @('check_sql04_all' ,'check_util_all')
+# $ScheduledTaskArray = @('call_stopwatch_pwsh')
+# $ScheduledTaskArray = @('call_check_local_dir')
+# $ScheduledTaskArray = @('check_atrnc_dir')
+ # $ScheduledTaskArray = @('call_stop_processes_pwsh')
         foreach($i in $ScheduledTaskArray) {
-            Get-ScheduledTask $i 
+            Get-ScheduledTask $i
             Start-ScheduledTask -TaskName $i
-            Get-ScheduledTask $i 
+            Get-ScheduledTask $i
         }
-
-
