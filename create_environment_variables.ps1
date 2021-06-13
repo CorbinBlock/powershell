@@ -3,16 +3,15 @@
 # Sources: https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/get-scheduledtask?view=windowsserver2019-ps
 # ===============================================================================================================
 
- $EnvVariableName = @('ozk')
- $EnvVariableValue = @('K#36Cza!98ueCEKP')
+ $EnvVariableName = @('hvd' , 'ad'  )
+ $EnvVariableValue = @('', '')
 
 $Index = 0
 
+
 foreach($i in $EnvVariableName){
-$EnvValueName = $EnvVariableValue[$Index]
-[System.Environment]::SetEnvironmentVariable($i, $EnvValueName, [System.EnvironmentVariableTarget]::Machine)
+Write-Output $i
+[System.Environment]::SetEnvironmentVariable($i, $EnvVariableValue[$Index], [System.EnvironmentVariableTarget]::Machine)
 $Index++
 Write-Output $Index
-Write-Output $i
-Write-Output $EnvValueName
 }

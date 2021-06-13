@@ -1,0 +1,33 @@
+
+  Id     Duration CommandLine
+  --     -------- -----------
+   1        0.007 Get-ExecutionPolicy MachinePolicy
+   2        0.062 Set-ExecutionPolicy AllSigned
+   3        0.029  Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Bypass  
+   4        0.015 Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Va…
+   5        0.012  Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Bypass  
+   6        0.012 Set-ExecutionPolicy AllSigned
+   7        0.018 Set-ExecutionPolicy Unrestricted
+   8        0.012 Get-ExecutionPolicy -List
+   9        0.006 Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+  10        0.004 Get-ExecutionPolicy -List
+  11        0.018 history
+  12        0.003 cd $env:scripts_dir
+  13        0.010 history > change_execution_policy_pwsh_notes.txt
+  14        0.012 type .\change_execution_policy_pwsh_notes.txt
+  15        0.035 .\check_ppu_lls.ps1
+  16        0.018 Set-ExecutionPolicy AllSigned
+  17        0.003 Get-ExecutionPolicy -List
+  18        0.005 Set-ExecutionPolicy Unrestricted -Scope LocalMachine -Force
+  19        0.003 Get-ExecutionPolicy -List
+  20        0.021 .\check_ppu_lls.ps1
+  21        0.014 Set-ExecutionPolicy Unrestricted -Scope MachinePolicy -Force
+  22        0.003 history > change_execution_policy_pwsh_notes.txt
+  23        0.008 type .\change_execution_policy_pwsh_notes.txt
+  24        0.021 cat https://stackoverflow.com/questions/27753917/how-do-you-successfully-change-execution-policy-and-…
+  25        0.015 cat 'https://stackoverflow.com/questions/27753917/how-do-you-successfully-change-execution-policy-and…
+  26        0.005 history > change_execution_policy_pwsh_notes.txt
+  27        0.009 type .\change_execution_policy_pwsh_notes.txt
+  28        0.017 cat 'https://vladtalkstech.com/2014/03/change-powershell-machinepolicy-execution-policy-windows-serve…
+  29        0.015 cat https://vladtalkstech.com/2015/03/windows-powershell-updated-execution-policy-successfully-settin…
+
