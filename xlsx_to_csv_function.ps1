@@ -18,7 +18,6 @@ Function ExcelToCsv ($File) {
 
 $FileName=$args[0]
 $DateString = $(get-date -f yyyyMMdd)
-# $DateString = '20210612'
 $FileName=$FileName + $DateString
 Write-Host $FileName
 ExcelToCsv -File $FileName

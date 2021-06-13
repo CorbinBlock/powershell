@@ -4,7 +4,7 @@
 # ===============================================================================================================
 
 # $Dir = $env:lls_ppu # Prod
-$Dir = $env:onedrive_dir # Test
+ $Dir = $env:local_archive_dir # Test
 Set-Location $Dir
 $LatestFile = Get-ChildItem  | Sort-Object LastWriteTime | Select-Object -last 1
 Write-Output $LatestFile
