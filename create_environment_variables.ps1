@@ -3,8 +3,8 @@
 # Sources: https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/get-scheduledtask?view=windowsserver2019-ps
 # ===============================================================================================================
 
- $EnvVariableName = @('ozk')
- $EnvVariableValue = @('K#36Cza!98ueCEKP')
+ $EnvVariableName = @('env_var_name')
+ $EnvVariableValue = @('env_var_value')
 
 $Index = 0
 
