@@ -1,0 +1,1 @@
+wsl.exe -d rhel8 -u cblock
