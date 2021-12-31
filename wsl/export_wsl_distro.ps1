@@ -1,1 +1,1 @@
-wsl.exe --export debian C:\tmp\debian.tar.gz
+wsl.exe --export rhel8 C:\tmp\rhel.tar.gz
